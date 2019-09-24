@@ -22,11 +22,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   getProjects() {
-    this.projectService.getSnapshotChanges().subscribe((resObj: ProjectInterface[]) => { 
-      this.activeProjects = resObj.filter(project => project.status === 'active' );
-      this.completedProjects = resObj.filter(project => project.status === 'completed' );
-      this.archivedProjects = resObj.filter(project => project.status === 'archived' );
-    });
+    this.projectService.getSnapshotChanges()
+      .pipe(takeUntil(this.unsubscribe))
+      .subscribe((resObj: ProjectInterface[]) => { 
+        this.activeProjects = resObj.filter(project => project.status === 'active' );
+        this.completedProjects = resObj.filter(project => project.status === 'completed' );
+        this.archivedProjects = resObj.filter(project => project.status === 'archived' );
+      },
+      (error) => console.error(error),
+      () => console.log('[takeUntil] complete')
+      );
   }
   
   ngOnDestroy() {
