@@ -12,13 +12,11 @@ angular 6 +
 ## Usage
 
 ```
-                  <!--Navbar Item Start-->
-                  <ul class="list-unstyled" >
-                      <li  *ngFor="let project of projects">
-                          <a routerLink="/project/{{ project.id }}">{{ project.name }}</a>
-                        </li>
-                  </ul>
-                  <!--Navbar Item End-->
+    this.yourService.getSnapshotChanges().subscribe((resObj: ProjectInterface[]) => { 
+      this.activeProjects = resObj.filter(project => project.status === 'active' );
+      this.completedProjects = resObj.filter(project => project.status === 'completed' );
+      this.archivedProjects = resObj.filter(project => project.status === 'archived' );
+    });
 ```
 
 ## Contributing
