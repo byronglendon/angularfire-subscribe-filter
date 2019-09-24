@@ -12,10 +12,10 @@ angular 6 +
 ## Usage
 
 ```
-    this.yourService.getSnapshotChanges().subscribe((resObj: ProjectInterface[]) => { 
-      this.activeProjects = resObj.filter(project => project.status === 'active' );
-      this.completedProjects = resObj.filter(project => project.status === 'completed' );
-      this.archivedProjects = resObj.filter(project => project.status === 'archived' );
+    this.yourService.getSnapshotChanges().subscribe((resObj: YourInterface[]) => { 
+      this.activeItem = resObj.filter(item => item.status === 'active' );
+      this.completedItem = resObj.filter(item => item.status === 'completed' );
+      this.archivedItem = resObj.filter(item => item.status === 'archived' );
     });
 ```
 
