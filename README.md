@@ -6,7 +6,7 @@ angularfire-subscribe-filter is an example usage of filtering AngularFire result
 
 ```bash
 angularfire2
-angular 6 +
+angular6+
 ```
 
 ## Usage
