@@ -1,6 +1,6 @@
 # AngularFire subscribe  & filter
 
-angularfire-subscribe-filter is an example usage of filtering AngularFire results after subscribing to collection snapshotChanges() 
+angularfire-subscribe-filter is an example usage of filtering AngularFire results after subscribing to snapshotChanges() of a firebase collection 
 
 ## Installation
 
