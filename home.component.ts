@@ -20,10 +20,10 @@ export class HomeComponent implements OnInit {
   }
 
   getProjects() {
-    this.projectService.getSnapshotChanges().subscribe((object: ProjectInterface[]) => { 
-      this.activeProjects = object.filter(project => project.status === 'active' );
-      this.completedProjects = object.filter(project => project.status === 'completed' );
-      this.archivedProjects = object.filter(project => project.status === 'archived' );
+    this.projectService.getSnapshotChanges().subscribe((resObj: ProjectInterface[]) => { 
+      this.activeProjects = resObj.filter(project => project.status === 'active' );
+      this.completedProjects = resObj.filter(project => project.status === 'completed' );
+      this.archivedProjects = resObj.filter(project => project.status === 'archived' );
     });
   }
 }
