@@ -1,6 +1,6 @@
 # AngularFire subscribe  & filter
 
-Foobar is a Python library for dealing with word pluralization.
+angularfire-subscribe-filter is an example usage of filtering AngularFire results after subscribing to collection snapshotChanges() 
 
 ## Installation
 
