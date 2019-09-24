@@ -7,8 +7,9 @@ import { ProjectInterface } from '@app/data-models/project.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  projects: Array<ProjectInterface>
-  
+  activeProjects: Array<ProjectInterface>;
+  completedProjects: Array<ProjectInterface>;
+  archivedProjects: Array<ProjectInterface>;
 
   constructor(
     private projectService: ProjectService
@@ -18,9 +19,11 @@ export class HomeComponent implements OnInit {
     this.getActiveProjects();
   }
 
-  getActiveProjects() {
+  getProjects() {
     this.projectService.getSnapshotChanges().subscribe((object: ProjectInterface[]) => { 
-      this.projects = object.filter(project => project.status === 'active' );
+      this.activeProjects = object.filter(project => project.status === 'active' );
+      this.completedProjects = object.filter(project => project.status === 'completed' );
+      this.archivedProjects = object.filter(project => project.status === 'archived' );
     });
   }
 }
