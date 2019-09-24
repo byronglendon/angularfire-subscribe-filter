@@ -6,7 +6,7 @@
                 </div>
                 <div id="collapseThree" class="card-body collapse show" data-parent="#accordion">
                   <!--Navbar Item Start-->
-                  <ul class="list-unstyled" id="homeSubmenu">
+                  <ul>
                       <li  *ngFor="let project of activeProjects">
                           <a routerLink="/project/{{ project.id }}">{{ project.name }}</a>
                         </li>
@@ -23,7 +23,7 @@
                 </div>
                 <div id="collapseFour" class="card-body collapse" data-parent="#accordion">
                   <!--Navbar Item Start-->
-                  <ul class="list-unstyled" id="homeSubmenu">
+                  <ul>
                       <li  *ngFor="let project of completedProjects">
                           <a routerLink="/project/{{ project.id }}">{{ project.name }}</a>
                         </li>
