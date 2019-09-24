@@ -1,4 +1,3 @@
-
                 <!--NavbarAccordian Start-->
                 <div class="card-header collapsed" data-toggle="collapse" href="#collapseThree">
                   <a class="card-title">
@@ -8,14 +7,14 @@
                 <div id="collapseThree" class="card-body collapse show" data-parent="#accordion">
                   <!--Navbar Item Start-->
                   <ul class="list-unstyled" id="homeSubmenu">
-                      <li  *ngFor="let project of projects">
+                      <li  *ngFor="let project of activeProjects">
                           <a routerLink="/project/{{ project.id }}">{{ project.name }}</a>
                         </li>
                   </ul>
                   <!--Navbar Item End-->
                 </div>
                 <!--Navbar Accordian End-->
-				
+
                 <!--Navbar Accordian Start-->
                 <div class="card-header collapsed" data-toggle="collapse" href="#collapseFour">
                   <a class="card-title">
@@ -25,12 +24,10 @@
                 <div id="collapseFour" class="card-body collapse" data-parent="#accordion">
                   <!--Navbar Item Start-->
                   <ul class="list-unstyled" id="homeSubmenu">
-                      <li  *ngFor="let project of project$">
+                      <li  *ngFor="let project of completedProjects">
                           <a routerLink="/project/{{ project.id }}">{{ project.name }}</a>
                         </li>
                   </ul>
                   <!--Navbar Item End-->
                 </div>
                 <!--Navbar Accordian End-->
-				
-
