@@ -22,7 +22,9 @@ Usefull when you a already have Range filters or an orderBy clause on the on the
 ```
 
 ## Contributing
-Pull requests & Improvement Suggestions are welcome.
+Pull requests & Improvement Suggestions are welcome
+
+AppAgility Ltd https://appagility.co.nz
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
